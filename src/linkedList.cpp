@@ -67,3 +67,24 @@ void destruir_lista(Lista & lista) {
 		lista.cola = nullptr;
 	}
 }
+
+/*---------------------------------------------*/
+void eliminar_nodo(Lista & lista, Nodo* aEliminar) {
+	if (lista.cabecera == lista.cola) {
+		lista.cabecera = nullptr;
+		lista.cola  = nullptr;
+	}
+	else if (lista.cabecera == aEliminar) {
+		lista.cabecera = lista.cabecera->sgt;
+		lista.cabecera->ant = nullptr;
+	}
+	else if (lista.cola == aEliminar) {
+		lista.cola = lista.cola->ant;
+		lista.cola->sgt = nullptr;
+	}
+	else {
+		aEliminar->sgt->ant = aEliminar->ant;
+		aEliminar->ant->sgt = aEliminar->sgt;
+	}
+	delete aEliminar;
+}

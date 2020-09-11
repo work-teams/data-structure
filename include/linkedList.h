@@ -28,4 +28,6 @@ void mostrar_lista(Lista lista);
 
 void destruir_lista(Lista & lista);
 
+void eliminar_nodo(Lista & lista, Nodo* aEliminar);
+
 #endif // LINKEDLIST_H
