@@ -30,4 +30,6 @@ void destruir_lista(Lista & lista);
 
 void eliminar_nodo(Lista & lista, Nodo* aEliminar);
 
+void ordenar_prioridad(Lista lista);
+
 #endif // LINKEDLIST_H

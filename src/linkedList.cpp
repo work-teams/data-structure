@@ -88,3 +88,24 @@ void eliminar_nodo(Lista & lista, Nodo* aEliminar) {
 	}
 	delete aEliminar;
 }
+
+/*---------------------------------------------*/
+void ordenar_prioridad(Lista lista) {
+	if ( !lista_vacia(lista) ) {
+		Paciente aux;
+		Nodo* sigue;
+		
+		while (lista.cabecera->sgt != nullptr) {
+			sigue = lista.cabecera->sgt;
+			while (sigue != nullptr) {
+				if ( strcmp(lista.cabecera->paciente.prioridad, sigue->paciente.prioridad) == 1 ) {
+					aux = lista.cabecera->paciente;
+					lista.cabecera->paciente = sigue->paciente;
+					sigue->paciente = aux;
+				}
+				sigue = sigue->sgt;
+			}
+			lista.cabecera = lista.cabecera->sgt;
+		}
+	}
+}
