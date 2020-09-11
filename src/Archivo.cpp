@@ -20,3 +20,19 @@ void guardar_datos(fstream & archivo, Lista lista) {
 	}
 	archivo.close();
 }
+
+/*---------------------------------------------*/
+void recuperar_datos(fstream & archivo, Lista & lista, Paciente paciente) {
+	archivo.open("Expedientes.txt", ios::in);
+	
+	if ( archivo.fail() ) {
+		return;
+	}
+	
+	archivo.read( (char*) &paciente, sizeof(paciente) );
+	while ( !archivo.eof() ) {
+		insertar_aLista(lista, paciente);
+		archivo.read( (char*) &paciente, sizeof(paciente) );
+	}
+	archivo.close();
+}

@@ -11,4 +11,6 @@ void destruir_archivo(fstream & archivo);
 
 void guardar_datos(fstream & archivo, Lista lista);
 
+void recuperar_datos(fstream & archivo, Lista & lista, Paciente paciente);
+
 #endif // ARCHIVO_H
