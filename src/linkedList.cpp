@@ -20,3 +20,13 @@ Nodo* buscar_codigo(Lista lista, string codigo) {
 	}
 	return lista.cabecera;
 }
+
+/*---------------------------------------------*/
+bool lista_vacia(Lista lista) {
+	if (lista.cabecera == nullptr) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}

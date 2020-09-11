@@ -20,4 +20,6 @@ Nodo* generar_nodo(Paciente paciente);
 
 Nodo* buscar_codigo(Lista lista, string codigo);
 
+bool lista_vacia(Lista lista);
+
 #endif // LINKEDLIST_H
