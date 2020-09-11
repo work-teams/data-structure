@@ -45,3 +45,11 @@ void insertar_aLista(Lista & lista, Paciente paciente) {
 		lista.cola = nuevo;
 	}
 }
+
+/*---------------------------------------------*/
+void mostrar_lista(Lista lista) {
+	while (lista.cabecera != nullptr) {
+		imprimir_paciente(lista.cabecera->paciente);
+		lista.cabecera = lista.cabecera->sgt;
+	}
+}
