@@ -22,4 +22,6 @@ Nodo* buscar_codigo(Lista lista, string codigo);
 
 bool lista_vacia(Lista lista);
 
+void insertar_aLista(Lista & lista, Paciente paciente);
+
 #endif // LINKEDLIST_H

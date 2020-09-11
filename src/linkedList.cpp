@@ -30,3 +30,18 @@ bool lista_vacia(Lista lista) {
 		return false;
 	}
 }
+
+/*---------------------------------------------*/
+void insertar_aLista(Lista & lista, Paciente paciente) {
+	Nodo* nuevo = generar_nodo(paciente);
+	
+	if ( lista_vacia(lista) ) {
+		lista.cabecera = nuevo;
+		lista.cola = nuevo;
+	}
+	else {
+		lista.cola->sgt = nuevo;
+		nuevo->ant = lista.cola;
+		lista.cola = nuevo;
+	}
+}
