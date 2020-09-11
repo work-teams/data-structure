@@ -9,5 +9,6 @@ using namespace ::std;
 ---------------------------------------------------------------------*/
 void destruir_archivo(fstream & archivo);
 
+void guardar_datos(fstream & archivo, Lista lista);
 
 #endif // ARCHIVO_H
