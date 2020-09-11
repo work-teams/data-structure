@@ -95,6 +95,10 @@ int main(int argc, char** argv) {
 				}
 				break;
 		}
+
+		system("pause");
+		system("cls");
+
 	} while (op != 4);
 	
 	return 0;
