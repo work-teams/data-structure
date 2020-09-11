@@ -18,4 +18,6 @@ struct Lista {
 ---------------------------------------------------------------------*/
 Nodo* generar_nodo(Paciente paciente);
 
+Nodo* buscar_codigo(Lista lista, string codigo);
+
 #endif // LINKEDLIST_H
