@@ -53,3 +53,17 @@ void mostrar_lista(Lista lista) {
 		lista.cabecera = lista.cabecera->sgt;
 	}
 }
+
+/*---------------------------------------------*/
+void destruir_lista(Lista & lista) {
+	if ( !lista_vacia(lista) ) {
+		Nodo* aEliminar;
+		
+		while (lista.cabecera != nullptr) {
+			aEliminar = lista.cabecera;
+			lista.cabecera = lista.cabecera->sgt;
+			delete aEliminar;
+		}
+		lista.cola = nullptr;
+	}
+}

@@ -26,4 +26,6 @@ void insertar_aLista(Lista & lista, Paciente paciente);
 
 void mostrar_lista(Lista lista);
 
+void destruir_lista(Lista & lista);
+
 #endif // LINKEDLIST_H
