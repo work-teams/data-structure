@@ -11,3 +11,11 @@ bool es_numero(string str) {
 
 	return true;
 }
+
+/*---------------------------------------------*/
+void a_mayuscula(string & str) {
+	char cad [str.length()];
+	strcpy(cad, str.c_str());
+	strupr(cad);
+	str = cad;
+}

@@ -10,4 +10,6 @@ using namespace ::std;
 ---------------------------------------------------------------------*/
 bool es_numero(string str);
 
+void a_mayuscula(string & str);
+
 #endif // VALIDAR_H
