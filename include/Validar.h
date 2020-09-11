@@ -16,4 +16,6 @@ string validar_codigo(string str);
 
 string validar_tipoSangre(string str);
 
+string define_prioridad(string tipoSangre);
+
 #endif // VALIDAR_H

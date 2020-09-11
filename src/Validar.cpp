@@ -72,3 +72,32 @@ string validar_tipoSangre(string str) {
 	
 	return str;
 }
+
+/*---------------------------------------------*/
+string define_prioridad(string tipoSangre) {
+	string val [] = {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"};
+	string str;
+	int i;
+
+	try {
+		fflush(stdin);
+		for (i = 0; i < 8; i++) {
+			if (tipoSangre == val[i]) {
+				throw i;
+			}
+		}
+	} catch (int e) {
+		switch (e) {
+			case 0: str = "0"; break;
+			case 1: str = "1"; break;
+			case 2: str = "2"; break;
+			case 3: str = "3"; break;
+			case 4: str = "4"; break;
+			case 5: str = "5"; break;
+			case 6: str = "6"; break;
+			case 7: str = "7"; break;
+		}
+
+		return str;
+	}
+}
