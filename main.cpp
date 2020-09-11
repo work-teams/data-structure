@@ -19,6 +19,7 @@
 #include "include/Donante.h"
 #include "include/linkedList.h"
 #include "include/Validar.h"
+#include "include/Consola.h"
 
 using namespace ::std;
 
@@ -49,9 +50,13 @@ int main(int argc, char** argv) {
 	recuperar_datos(archivo, lista, paciente); //recupera datos del archivo
 
 	do {
+		menuPrincipal();
 		cin >> op;
+
 		switch (op) {
 			case 1:
+				menuInsertar();
+
 				codigo = validar_codigo(codigo);
 				nombre = validar_nombre();
 				edad = validar_edad(edad);
@@ -68,6 +73,8 @@ int main(int argc, char** argv) {
 				guardar_datos(archivo, lista); //guarda datos en archivo
 				break;
 			case 3:
+				menuMostrar();
+
 				mostrar_lista(lista); break; //imprime la lista enlazada
 			case 5:
 				destruir_lista(lista); break;
