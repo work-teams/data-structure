@@ -43,3 +43,32 @@ string validar_codigo(string str) {
 	
 	return str;
 }
+
+/*---------------------------------------------*/
+string validar_tipoSangre(string str) {
+	string val [] = {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"};
+	bool esValido = false;
+	
+	while (!esValido) {
+		try {
+			fflush(stdin);
+			cout << "Tipo de sangre: ";
+			getline(cin, str);
+			
+			if (str.length() >= 2 and str.length() <= 3) {
+				a_mayuscula(str);
+			}
+			else {
+				throw esValido;
+			}
+			
+			for (int i = 0; i < 8; i++) {
+				if (str == val[i]) {
+					throw esValido = true;
+				}
+			}
+		} catch (bool e) {}
+	}
+	
+	return str;
+}

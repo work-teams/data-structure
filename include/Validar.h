@@ -14,4 +14,6 @@ void a_mayuscula(string & str);
 
 string validar_codigo(string str);
 
+string validar_tipoSangre(string str);
+
 #endif // VALIDAR_H
