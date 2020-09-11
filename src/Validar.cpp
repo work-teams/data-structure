@@ -19,3 +19,27 @@ void a_mayuscula(string & str) {
 	strupr(cad);
 	str = cad;
 }
+
+/*---------------------------------------------*/
+string validar_codigo(string str) {
+	bool esValido = false;
+	
+	while (!esValido) {
+		try {
+			fflush(stdin);
+			cout << "Codigo: ";
+			getline(cin, str);
+			
+			if (str.length() != 8) {
+				throw esValido;
+			}
+			
+			esValido = es_numero(str);
+			if (!esValido) {
+				throw esValido;
+			}
+		} catch (bool e) {}
+	}
+	
+	return str;
+}
