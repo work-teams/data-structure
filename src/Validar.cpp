@@ -101,3 +101,23 @@ string define_prioridad(string tipoSangre) {
 		return str;
 	}
 }
+
+/*---------------------------------------------*/
+string validar_edad(string str) {
+	bool esValido = false;
+	while (!esValido) {
+		try {
+			fflush(stdin);
+			cout << "Edad: ";
+			getline(cin, str);
+
+			if (str.length() > 3) {
+				throw esValido;
+			}
+
+			esValido = es_numero(str);
+		} catch (bool e) {}
+	}
+
+	return str;
+}

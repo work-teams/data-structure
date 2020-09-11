@@ -18,4 +18,6 @@ string validar_tipoSangre(string str);
 
 string define_prioridad(string tipoSangre);
 
+string validar_edad(string str);
+
 #endif // VALIDAR_H
