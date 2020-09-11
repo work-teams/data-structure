@@ -22,4 +22,6 @@ string validar_edad(string str);
 
 string validar_sexo(string str);
 
+string validar_nombre();
+
 #endif // VALIDAR_H

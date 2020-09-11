@@ -142,3 +142,15 @@ string validar_sexo(string str) {
 
 	return str;
 }
+
+/*---------------------------------------------*/
+string validar_nombre() {
+	string str;
+
+	fflush(stdin);
+	cout << "Nombre: ";
+	getline(cin, str);
+	a_mayuscula(str);
+
+	return str;
+}
