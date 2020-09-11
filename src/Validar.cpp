@@ -121,3 +121,24 @@ string validar_edad(string str) {
 
 	return str;
 }
+
+/*---------------------------------------------*/
+string validar_sexo(string str) {
+	string val [] = {"MASCULINO", "FEMENINO"};
+	bool esValido = false;
+
+	while (!esValido) {
+		fflush(stdin);
+		cout << "Sexo: ";
+		getline(cin, str);
+		a_mayuscula(str);
+
+		for (int i = 0; i < 2; i++) {
+			if (str == val[i]) {
+				esValido = true;
+			}
+		}
+	}
+
+	return str;
+}
