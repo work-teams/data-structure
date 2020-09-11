@@ -19,5 +19,6 @@ struct Paciente {
 ---------------------------------------------------------------------*/
 Paciente generar_paciente(string codigo, string nombre, string edad, string sexo, string tipoSangre, string prioridad);
 
+void imprimir_paciente(Paciente paciente);
 
 #endif // DONANTE_H

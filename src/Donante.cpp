@@ -16,3 +16,9 @@ Paciente generar_paciente(string codigo, string nombre, string edad, string sexo
 	
 	return nuevo;
 }
+
+/*---------------------------------------------*/
+void imprimir_paciente(Paciente paciente) {
+	fflush(stdin);
+	printf("-> %s %s %s %s %s %s\n", paciente.codigo, paciente.nombre, paciente.edad, paciente.sexo, paciente.tipoSangre, paciente.prioridad);
+}
