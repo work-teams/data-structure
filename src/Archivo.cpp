@@ -1,4 +1,4 @@
-#include "Archivo.h"
+#include "../include/Archivo.h"
 
 /*                            Definicion
 ---------------------------------------------------------------------*/

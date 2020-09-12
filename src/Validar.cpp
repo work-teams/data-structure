@@ -1,4 +1,4 @@
-#include "Validar.h"
+#include "../include/Validar.h"
 
 /*                            Definicion
 ---------------------------------------------------------------------*/
