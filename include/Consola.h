@@ -12,4 +12,6 @@ void menuMostrar();
 
 void menuInsertar();
 
+void menuSolicitarCodigo();
+
 #endif

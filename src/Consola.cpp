@@ -33,3 +33,9 @@ void menuInsertar() {
 	cout<<"****************************************************\n";
 
 }
+
+void menuSolicitarCodigo() {
+    cout<<"*****************************************";
+	cout<<"\n\tDIGITE CODIGO DEL PACIENTE \n";
+	cout<<"*****************************************\n";
+}

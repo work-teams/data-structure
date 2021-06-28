@@ -82,6 +82,7 @@ int main(int argc, char** argv) {
 				system("pause");
 				break;
 
+            // Ordena la lista enlazada por tipo de sangre: A+ / A- / B+ / B- / AB+ / AB- / O+ / O-
             case 3:
                 ordenar_prioridad(lista);
                 system("cls");
@@ -93,6 +94,7 @@ int main(int argc, char** argv) {
             // Buscar paciente por código.
             case 4:
                 system("cls");
+                menuSolicitarCodigo();
                 codigo = validar_codigo(codigo);
 				buscado = buscar_codigo(lista, codigo);
 				if (buscado != nullptr) {
@@ -105,6 +107,7 @@ int main(int argc, char** argv) {
             // Eliminar paciente por código.
             case 5:
                 system("cls");
+                menuSolicitarCodigo();
                 codigo = validar_codigo(codigo);
 				buscado = buscar_codigo(lista, codigo);
 				if (buscado != nullptr) {
@@ -120,7 +123,7 @@ int main(int argc, char** argv) {
             // Guardar datos de la lista enlazada en el archivo (PERSISTENCIA).
 			case 7:
 			    cout << "\n\tDESEA GUARDAR LOS CAMBIOS?" << endl;
-			    cout << "\t1.No\n\t2.Si\n" << endl;
+			    cout << "\t1. No\n\t2. Si\n" << endl;
 			    cout << " INGRESE OPCION: ";
 			    cin >> decision;
 			    if (decision == 2) {
