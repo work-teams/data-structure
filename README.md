@@ -1,7 +1,7 @@
 # BLOOD-BANK PROJECT
 Proyecto final para el curso de estructura de datos.
 
-### Equipo "Estructura de Datos"
+### Equipo de Estructura de Datos
 > Integrantes
 > - Gonzales Villalobos Jhon Brayan  
 > - Marin Evangelista	Jorge Luis  
