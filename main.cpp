@@ -5,7 +5,7 @@
 	School: Ingenieria de Software
 
 	Subject: Estructura de Datos
-	Project: Sistema Banco de Sangre
+	Project: Blood-Bank
 
 	Name: Grupo 05
 	Date: 2020/09/11
