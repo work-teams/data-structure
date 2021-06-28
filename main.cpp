@@ -3,13 +3,13 @@
 	University: Universidad Nacional Mayor de San Marcos
 	Faculty: Ingenieria de Sistemas e Informatica
 	School: Ingenieria de Software
-	
+
 	Subject: Estructura de Datos
 	Project: Sistema Banco de Sangre
-	
-	Name: Marin Evangelista Jorge Luis
+
+	Name: Grupo 05
 	Date: 2020/09/11
-	User: jm-dev7
+	User: krypt97
 ---------------------------------------------------------------------
 */
 
@@ -28,13 +28,13 @@ using namespace ::std;
 /*                        Funcion Principal
 ---------------------------------------------------------------------*/
 int main(int argc, char** argv) {
-	cout << "EstructuraDatos_ProyectoFinal_SistemaBancoSangre" << endl << endl;
-	
+	cout << "EstructuraDatos-ProyectoFinal-SistemaBancoSangre" << endl << endl;
+
 	/*---------------------------------------------*/
 	Lista lista;
 	Paciente paciente;
 	fstream archivo;
-	
+
 	string codigo;
 	string tipoSangre;
 	string edad;
@@ -43,63 +43,69 @@ int main(int argc, char** argv) {
 	string nombre;
 
 	Nodo* buscado;
-	
+
 	int op;
-	
 	/*---------------------------------------------*/
-	recuperar_datos(archivo, lista, paciente); //recupera datos del archivo
+
+	// Recupera datos del archivo e inserta en la lista enlazada.
+	recuperar_datos(archivo, lista, paciente);
 
 	do {
 		menuPrincipal();
 		cin >> op;
 
 		switch (op) {
+		    // Insertar paciente en la lista enlazada.
 			case 1:
 				menuInsertar();
-
 				codigo = validar_codigo(codigo);
 				nombre = validar_nombre();
 				edad = validar_edad(edad);
 				sexo = validar_sexo(sexo);
 				tipoSangre = validar_tipoSangre(tipoSangre);
 				prioridad = define_prioridad(tipoSangre);
-
 				paciente = generar_paciente(codigo, nombre, edad, sexo, tipoSangre, prioridad);
-				
-				insertar_aLista(lista, paciente); //inserta en lista enlazada
+				insertar_aLista(lista, paciente);
 				cout << "insertado\n";
 				break;
-			case 2:
-				guardar_datos(archivo, lista); //guarda datos en archivo
-				break;
-			case 3:
-				menuMostrar();
 
-				mostrar_lista(lista); break; //imprime la lista enlazada
-			case 5:
-				destruir_lista(lista); break;
-			case 6:
+            // Imprime en pantalla los datos almacenado en la lista enlazada.
+            case 2:
+				menuMostrar();
+				mostrar_lista(lista); break;
+
+            case 3: ordenar_prioridad(lista); break;
+
+            // Buscar paciente por código.
+            case 4:
+                codigo = validar_codigo(codigo);
+				buscado = buscar_codigo(lista, codigo);
+				if (buscado != nullptr) {
+                    menuMostrar();
+					imprimir_paciente(buscado->paciente);
+				}
+				break;
+
+            // Eliminar paciente por código.
+            case 5:
+                codigo = validar_codigo(codigo);
 				buscado = buscar_codigo(lista, codigo);
 				if (buscado != nullptr) {
 					eliminar_nodo(lista, buscado);
 					cout << "eliminado\n";
 				}
 				break;
-			case 7:
-				ordenar_prioridad(lista);
-				break;
-			case 8:
-				buscado = buscar_codigo(lista, codigo);
-				if (buscado != nullptr) {
-					imprimir_paciente(buscado->paciente);
-				}
-				break;
-		}
 
+            // Guardar datos de la lista enlazada en el archivo.
+			case 6: guardar_datos(archivo, lista); break;
+
+            // Borra la lista enlazada de memoria y elimina el archivo.
+            case 7:	destruir_lista(lista); break;
+		}
 		system("pause");
 		system("cls");
 
-	} while (op != 4);
-	
+	} while (op != 8);
+
 	return 0;
 }
