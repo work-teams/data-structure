@@ -6,14 +6,13 @@ void menuPrincipal() {
 	cout<<"**********************************************";
 	cout<<"\n\t\t MENU PRINCIPAL \n";
 	cout<<"**********************************************\n";
-	cout<<" 	1. Insertar Paciente                      "<<endl;
-	cout<<" 	2. Mostrar Lista                          "<<endl;
-	cout<<" 	3. Ordenar Lista	                      "<<endl;
-	cout<<" 	4. Buscar por Codigo                      "<<endl;
-    cout<<" 	5. Eliminar por Codigo                    "<<endl;
-	cout<<" 	6. Guardar Datos                          "<<endl;
-	cout<<" 	7. Destruir Lista Enlazada                "<<endl;
-	cout<<" 	8. Salir		                          "<<endl;
+	cout<<" 	1. Insertar paciente                      "<<endl;
+	cout<<" 	2. Mostrar lista                          "<<endl;
+	cout<<" 	3. Ordenar lista por tipo de sangre       "<<endl;
+	cout<<" 	4. Buscar por codigo                      "<<endl;
+    cout<<" 	5. Eliminar por codigo                    "<<endl;
+	cout<<" 	6. Destruir lista enlazada                "<<endl;
+	cout<<" 	7. Salir		                          "<<endl;
 	cout<<"**********************************************\n";
 
 	cout<<"\n INGRESE OPCION: ";
@@ -29,8 +28,8 @@ void menuMostrar() {
 
 /*---------------------------------------------*/
 void menuInsertar() {
-	cout<<"**********************************************";
-	cout<<"\n\t\t INSERTAR \n";
-	cout<<"**********************************************\n";
+	cout<<"****************************************************";
+	cout<<"\n\tDIGITE DATOS DEL PACIENTE A INSERTAR \n";
+	cout<<"****************************************************\n";
 
 }

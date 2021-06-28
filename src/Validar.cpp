@@ -23,24 +23,24 @@ void a_mayuscula(string & str) {
 /*---------------------------------------------*/
 string validar_codigo(string str) {
 	bool esValido = false;
-	
+
 	while (!esValido) {
 		try {
 			fflush(stdin);
-			cout << "Codigo: ";
+			cout << "\tCodigo: ";
 			getline(cin, str);
-			
+
 			if (str.length() != 8) {
 				throw esValido;
 			}
-			
+
 			esValido = es_numero(str);
 			if (!esValido) {
 				throw esValido;
 			}
 		} catch (bool e) {}
 	}
-	
+
 	return str;
 }
 
@@ -48,20 +48,20 @@ string validar_codigo(string str) {
 string validar_tipoSangre(string str) {
 	string val [] = {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"};
 	bool esValido = false;
-	
+
 	while (!esValido) {
 		try {
 			fflush(stdin);
-			cout << "Tipo de sangre: ";
+			cout << "\tTipo de sangre: ";
 			getline(cin, str);
-			
+
 			if (str.length() >= 2 and str.length() <= 3) {
 				a_mayuscula(str);
 			}
 			else {
 				throw esValido;
 			}
-			
+
 			for (int i = 0; i < 8; i++) {
 				if (str == val[i]) {
 					throw esValido = true;
@@ -69,7 +69,7 @@ string validar_tipoSangre(string str) {
 			}
 		} catch (bool e) {}
 	}
-	
+
 	return str;
 }
 
@@ -108,7 +108,7 @@ string validar_edad(string str) {
 	while (!esValido) {
 		try {
 			fflush(stdin);
-			cout << "Edad: ";
+			cout << "\tEdad: ";
 			getline(cin, str);
 
 			if (str.length() > 3) {
@@ -129,7 +129,7 @@ string validar_sexo(string str) {
 
 	while (!esValido) {
 		fflush(stdin);
-		cout << "Sexo: ";
+		cout << "\tSexo: ";
 		getline(cin, str);
 		a_mayuscula(str);
 
@@ -148,7 +148,7 @@ string validar_nombre() {
 	string str;
 
 	fflush(stdin);
-	cout << "Nombre: ";
+	cout << "\tNombre: ";
 	getline(cin, str);
 	a_mayuscula(str);
 
